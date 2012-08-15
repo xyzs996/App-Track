@@ -41,13 +41,13 @@
 {
     if (indexPath.row != _apps.count)
     {
-        ATLandingAppCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"AppCell" forIndexPath:indexPath];
+        ATLandingAppCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"AppCell"];
         cell.app = [_apps objectAtIndex:indexPath.row];
         return cell;
     }
     else
     {
-        UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NewCell" forIndexPath:indexPath];
+        UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NewCell"];
         return cell;
     }
 }

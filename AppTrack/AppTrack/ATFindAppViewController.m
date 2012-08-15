@@ -41,7 +41,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"FindAppCell";
-    ATFindAppCell *cell = [_tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    ATFindAppCell *cell = [_tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     cell.app = _apps[indexPath.row];
     
