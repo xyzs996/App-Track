@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1803" systemVersion="11E53" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="App" representedClassName="ATApp" syncable="YES">
+        <attribute name="appId" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="belongsToUser" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="cost" optional="YES" attributeType="String" syncable="YES"/>
@@ -15,7 +16,7 @@
         <relationship name="app" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="App" inverseName="comments" inverseEntity="App" syncable="YES"/>
     </entity>
     <elements>
-        <element name="App" positionX="160" positionY="192" width="128" height="180"/>
-        <element name="Comment" positionX="160" positionY="192" width="128" height="60"/>
+        <element name="App" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Comment" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

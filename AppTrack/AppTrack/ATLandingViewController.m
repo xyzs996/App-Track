@@ -56,7 +56,8 @@
 {
     if (indexPath.row != _apps.count)
     {
-        ATDetailViewController *controller = [[ATDetailViewController alloc] init];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        ATDetailViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"Details"];
         controller.app = [_apps objectAtIndex:indexPath.row];
         [self.navigationController pushViewController:controller animated:YES];
     }

@@ -23,11 +23,14 @@
 @property (nonatomic) BOOL paid;
 @property (nonatomic, retain) NSSet *competingApps;
 @property (nonatomic, retain) NSSet *comments;
+@property (nonatomic, strong) NSString *appId;
 
 //Unpersisted
 @property (nonatomic, strong) UIImage *icon;
+@property (nonatomic, strong) NSString *rank;
 
 + (NSOperation *)appsMatchingSearchString:(NSString *)searchString handler:(void (^)(NSArray *apps, NSError *error))handler;
++ (NSOperation *)detailedAppWithApp:(ATApp *)app handler:(void (^)(ATApp *app, NSError *error))handler;
 
 @end
 
