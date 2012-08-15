@@ -18,7 +18,7 @@
 @property (nonatomic, retain) NSString * iconURL;
 @property (nonatomic, retain) NSString * cost;
 @property (nonatomic) BOOL belongsToUser;
-@property (nonatomic) int16_t category;
+@property (nonatomic) NSString *category;
 @property (nonatomic) int16_t halfStars;
 @property (nonatomic) BOOL paid;
 @property (nonatomic, retain) NSSet *competingApps;

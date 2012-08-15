@@ -8,12 +8,12 @@
 
 #import "ATFindAppCell.h"
 
+#import "AFNetworking/AFNetworking.h"
+
 @interface ATFindAppCell ()
 
 @property (nonatomic, weak) IBOutlet UIImageView *iconView;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
-@property (nonatomic, weak) IBOutlet UILabel *costCategoryLabel;
-@property (nonatomic, weak) IBOutlet UILabel *starsLabel;
 
 @end
 
@@ -24,8 +24,7 @@
     _app = app;
     
     _nameLabel.text = _app.name;
-    _costCategoryLabel.text = _app.cost;
-    _starsLabel.text = @"***";
+    [_iconView setImageWithURL:[NSURL URLWithString:_app.iconURL]];
 }
 
 @end

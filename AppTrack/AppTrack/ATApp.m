@@ -33,12 +33,28 @@
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
                                         success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
                                         {
-                                            NSLog(@"%@", JSON);
+                                            NSMutableArray *apps = [@[] mutableCopy];
+                                            NSArray *results = [JSON objectForKey:@"results"];
+                                            for (NSDictionary *result in results)
+                                            {
+                                                NSEntityDescription *description = [NSEntityDescription entityForName:@"App" inManagedObjectContext:[ATDataManager mainContext]];
+                                                ATApp *app = [[ATApp alloc] initWithEntity:description insertIntoManagedObjectContext:nil];
+                                                
+                                                app.name = [result objectForKey:@"trackCensoredName"];
+                                                app.iconURL = [result objectForKey:@"artworkUrl60"];
+                                                app.category = [[result objectForKey:@"genreIds"] objectAtIndex:0];
+                                                app.paid = ![[result objectForKey:@"formattedPrice"] isEqualToString:@"Free"];
+                                                [apps addObject:app];
+                                            }
+                                                                                    
+                                            handler(apps, nil);
                                         }
                                         failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
                                         {
                                             handler(nil, error);
                                         }];
+    
+    [[NSOperationQueue mainQueue] addOperation:operation];
     
     return operation;
 }

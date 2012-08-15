@@ -16,6 +16,9 @@
 		767EA26815D1DD9C00970C30 /* ATAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 767EA26715D1DD9C00970C30 /* ATAppDelegate.m */; };
 		767EA26B15D1DD9C00970C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767EA26915D1DD9C00970C30 /* Main.storyboard */; };
 		767EA26E15D1DD9C00970C30 /* AppTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 767EA26C15D1DD9C00970C30 /* AppTrack.xcdatamodeld */; };
+		76826D1115DB2A7200851864 /* ATLandingAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76826D1015DB2A7200851864 /* ATLandingAppCell.m */; };
+		76826D1815DB2C5B00851864 /* ATDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76826D1715DB2C5B00851864 /* ATDetailViewController.m */; };
+		76826D2015DB2DED00851864 /* ATDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76826D1F15DB2DED00851864 /* ATDataManager.m */; };
 		7688B23815D1ED8C00159D8C /* ATFindAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7688B23715D1ED8C00159D8C /* ATFindAppCell.m */; };
 		7688B23B15D1EDC700159D8C /* ATFindAppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7688B23A15D1EDC700159D8C /* ATFindAppViewController.m */; };
 		7688B24415D1EEA000159D8C /* ATApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 7688B24315D1EEA000159D8C /* ATApp.m */; };
@@ -47,6 +50,12 @@
 		767EA26715D1DD9C00970C30 /* ATAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATAppDelegate.m; sourceTree = "<group>"; };
 		767EA26A15D1DD9C00970C30 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		767EA26D15D1DD9C00970C30 /* AppTrack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppTrack.xcdatamodel; sourceTree = "<group>"; };
+		76826D0F15DB2A7200851864 /* ATLandingAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLandingAppCell.h; sourceTree = "<group>"; };
+		76826D1015DB2A7200851864 /* ATLandingAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLandingAppCell.m; sourceTree = "<group>"; };
+		76826D1615DB2C5B00851864 /* ATDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDetailViewController.h; sourceTree = "<group>"; };
+		76826D1715DB2C5B00851864 /* ATDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATDetailViewController.m; sourceTree = "<group>"; };
+		76826D1E15DB2DED00851864 /* ATDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDataManager.h; sourceTree = "<group>"; };
+		76826D1F15DB2DED00851864 /* ATDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATDataManager.m; sourceTree = "<group>"; };
 		7688B23615D1ED8C00159D8C /* ATFindAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATFindAppCell.h; sourceTree = "<group>"; };
 		7688B23715D1ED8C00159D8C /* ATFindAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATFindAppCell.m; sourceTree = "<group>"; };
 		7688B23915D1EDC700159D8C /* ATFindAppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATFindAppViewController.h; sourceTree = "<group>"; };
@@ -78,6 +87,7 @@
 		7688B25E15D1F54C00159D8C /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		7688B27315D1FD2700159D8C /* ATLandingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLandingViewController.h; sourceTree = "<group>"; };
 		7688B27415D1FD2700159D8C /* ATLandingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLandingViewController.m; sourceTree = "<group>"; };
+		76D118D315DB3F540053F5BB /* ATConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +159,41 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		76826D1315DB2C3500851864 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				76826D1415DB2C3D00851864 /* Controller */,
+				76826D1515DB2C4100851864 /* View */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		76826D1415DB2C3D00851864 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				76826D1615DB2C5B00851864 /* ATDetailViewController.h */,
+				76826D1715DB2C5B00851864 /* ATDetailViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		76826D1515DB2C4100851864 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		76826D1D15DB2DE000851864 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				76826D1E15DB2DED00851864 /* ATDataManager.h */,
+				76826D1F15DB2DED00851864 /* ATDataManager.m */,
+				76D118D315DB3F540053F5BB /* ATConstants.h */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		7688B22E15D1ECC000159D8C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,8 +213,10 @@
 		7688B23015D1ECF700159D8C /* AppTrack */ = {
 			isa = PBXGroup;
 			children = (
+				76826D1D15DB2DE000851864 /* Utility */,
 				7688B23115D1ED0C00159D8C /* Landing */,
 				7688B23215D1ED1900159D8C /* Find App */,
+				76826D1315DB2C3500851864 /* Detail */,
 			);
 			name = AppTrack;
 			sourceTree = "<group>";
@@ -261,6 +308,8 @@
 		7688B27115D1FCFE00159D8C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				76826D0F15DB2A7200851864 /* ATLandingAppCell.h */,
+				76826D1015DB2A7200851864 /* ATLandingAppCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -356,6 +405,9 @@
 				7688B26715D1F54C00159D8C /* AFXMLRequestOperation.m in Sources */,
 				7688B26815D1F54C00159D8C /* UIImageView+AFNetworking.m in Sources */,
 				7688B27515D1FD2700159D8C /* ATLandingViewController.m in Sources */,
+				76826D1115DB2A7200851864 /* ATLandingAppCell.m in Sources */,
+				76826D1815DB2C5B00851864 /* ATDetailViewController.m in Sources */,
+				76826D2015DB2DED00851864 /* ATDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
