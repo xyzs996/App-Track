@@ -45,7 +45,7 @@
                                                 ATApp *app = [[ATApp alloc] initWithEntity:description insertIntoManagedObjectContext:nil];
                                                 
                                                 app.name = [result objectForKey:@"trackCensoredName"];
-                                                app.iconURL = [result objectForKey:@"artworkUrl60"];
+                                                app.iconURL = [result objectForKey:@"artworkUrl512"];
                                                 app.category = [[result objectForKey:@"primaryGenreId"] stringValue];
                                                 app.paid = ![[result objectForKey:@"formattedPrice"] isEqualToString:@"Free"];
                                                 app.appId = [[result objectForKey:@"trackId"] stringValue];

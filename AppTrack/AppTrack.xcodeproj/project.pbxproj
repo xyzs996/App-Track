@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7630D29E16250751006BA163 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7630D29816250751006BA163 /* background.png */; };
+		7630D29F16250751006BA163 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7630D29916250751006BA163 /* background@2x.png */; };
+		7630D2A016250751006BA163 /* rank_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 7630D29A16250751006BA163 /* rank_background.png */; };
+		7630D2A116250751006BA163 /* rank_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7630D29B16250751006BA163 /* rank_background@2x.png */; };
+		7630D2A216250751006BA163 /* top_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7630D29C16250751006BA163 /* top_bar.png */; };
+		7630D2A316250751006BA163 /* top_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7630D29D16250751006BA163 /* top_bar@2x.png */; };
+		7630D2A61625150C006BA163 /* ATLandingViewAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7630D2A51625150C006BA163 /* ATLandingViewAppCell.m */; };
+		7630D2A9162516C2006BA163 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7630D2A7162516C2006BA163 /* add_button.png */; };
+		7630D2AA162516C2006BA163 /* add_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7630D2A8162516C2006BA163 /* add_button@2x.png */; };
 		767EA25615D1DD9C00970C30 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767EA25515D1DD9C00970C30 /* UIKit.framework */; };
 		767EA25815D1DD9C00970C30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767EA25715D1DD9C00970C30 /* Foundation.framework */; };
 		767EA25A15D1DD9C00970C30 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767EA25915D1DD9C00970C30 /* CoreGraphics.framework */; };
@@ -16,7 +25,6 @@
 		767EA26815D1DD9C00970C30 /* ATAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 767EA26715D1DD9C00970C30 /* ATAppDelegate.m */; };
 		767EA26B15D1DD9C00970C30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767EA26915D1DD9C00970C30 /* Main.storyboard */; };
 		767EA26E15D1DD9C00970C30 /* AppTrack.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 767EA26C15D1DD9C00970C30 /* AppTrack.xcdatamodeld */; };
-		76826D1115DB2A7200851864 /* ATLandingAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 76826D1015DB2A7200851864 /* ATLandingAppCell.m */; };
 		76826D1815DB2C5B00851864 /* ATDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76826D1715DB2C5B00851864 /* ATDetailViewController.m */; };
 		76826D2015DB2DED00851864 /* ATDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 76826D1F15DB2DED00851864 /* ATDataManager.m */; };
 		7688B23815D1ED8C00159D8C /* ATFindAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7688B23715D1ED8C00159D8C /* ATFindAppCell.m */; };
@@ -37,6 +45,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7630D29816250751006BA163 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		7630D29916250751006BA163 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		7630D29A16250751006BA163 /* rank_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rank_background.png; sourceTree = "<group>"; };
+		7630D29B16250751006BA163 /* rank_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rank_background@2x.png"; sourceTree = "<group>"; };
+		7630D29C16250751006BA163 /* top_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_bar.png; sourceTree = "<group>"; };
+		7630D29D16250751006BA163 /* top_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_bar@2x.png"; sourceTree = "<group>"; };
+		7630D2A41625150C006BA163 /* ATLandingViewAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLandingViewAppCell.h; sourceTree = "<group>"; };
+		7630D2A51625150C006BA163 /* ATLandingViewAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLandingViewAppCell.m; sourceTree = "<group>"; };
+		7630D2A7162516C2006BA163 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
+		7630D2A8162516C2006BA163 /* add_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_button@2x.png"; sourceTree = "<group>"; };
 		767EA25115D1DD9C00970C30 /* AppTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		767EA25515D1DD9C00970C30 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		767EA25715D1DD9C00970C30 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -50,8 +68,6 @@
 		767EA26715D1DD9C00970C30 /* ATAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ATAppDelegate.m; sourceTree = "<group>"; };
 		767EA26A15D1DD9C00970C30 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Main.storyboard; sourceTree = "<group>"; };
 		767EA26D15D1DD9C00970C30 /* AppTrack.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AppTrack.xcdatamodel; sourceTree = "<group>"; };
-		76826D0F15DB2A7200851864 /* ATLandingAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLandingAppCell.h; sourceTree = "<group>"; };
-		76826D1015DB2A7200851864 /* ATLandingAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLandingAppCell.m; sourceTree = "<group>"; };
 		76826D1615DB2C5B00851864 /* ATDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDetailViewController.h; sourceTree = "<group>"; };
 		76826D1715DB2C5B00851864 /* ATDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATDetailViewController.m; sourceTree = "<group>"; };
 		76826D1E15DB2DED00851864 /* ATDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATDataManager.h; sourceTree = "<group>"; };
@@ -105,6 +121,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7630D2941624FEC3006BA163 /* Views and Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7630D2961624FF00006BA163 /* Global */,
+				7688B23115D1ED0C00159D8C /* Landing */,
+				7688B23215D1ED1900159D8C /* Find App */,
+				76826D1315DB2C3500851864 /* Detail */,
+			);
+			name = "Views and Controllers";
+			sourceTree = "<group>";
+		};
+		7630D2961624FF00006BA163 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Global;
+			sourceTree = "<group>";
+		};
+		7630D2971624FFE1006BA163 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7630D2A7162516C2006BA163 /* add_button.png */,
+				7630D2A8162516C2006BA163 /* add_button@2x.png */,
+				7630D29816250751006BA163 /* background.png */,
+				7630D29916250751006BA163 /* background@2x.png */,
+				7630D29A16250751006BA163 /* rank_background.png */,
+				7630D29B16250751006BA163 /* rank_background@2x.png */,
+				7630D29C16250751006BA163 /* top_bar.png */,
+				7630D29D16250751006BA163 /* top_bar@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		767EA24615D1DD9C00970C30 = {
 			isa = PBXGroup;
 			children = (
@@ -140,8 +189,9 @@
 				767EA26615D1DD9C00970C30 /* ATAppDelegate.h */,
 				767EA26715D1DD9C00970C30 /* ATAppDelegate.m */,
 				767EA26C15D1DD9C00970C30 /* AppTrack.xcdatamodeld */,
-				7688B23015D1ECF700159D8C /* AppTrack */,
 				7688B23515D1ED3F00159D8C /* Models */,
+				7630D2941624FEC3006BA163 /* Views and Controllers */,
+				76826D1D15DB2DE000851864 /* Utility */,
 				7688B22F15D1ECDC00159D8C /* Resources */,
 				767EA25E15D1DD9C00970C30 /* Supporting Files */,
 			);
@@ -205,20 +255,10 @@
 		7688B22F15D1ECDC00159D8C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7630D2971624FFE1006BA163 /* Images */,
 				7688B22E15D1ECC000159D8C /* Storyboards */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		7688B23015D1ECF700159D8C /* AppTrack */ = {
-			isa = PBXGroup;
-			children = (
-				76826D1D15DB2DE000851864 /* Utility */,
-				7688B23115D1ED0C00159D8C /* Landing */,
-				7688B23215D1ED1900159D8C /* Find App */,
-				76826D1315DB2C3500851864 /* Detail */,
-			);
-			name = AppTrack;
 			sourceTree = "<group>";
 		};
 		7688B23115D1ED0C00159D8C /* Landing */ = {
@@ -308,8 +348,8 @@
 		7688B27115D1FCFE00159D8C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				76826D0F15DB2A7200851864 /* ATLandingAppCell.h */,
-				76826D1015DB2A7200851864 /* ATLandingAppCell.m */,
+				7630D2A41625150C006BA163 /* ATLandingViewAppCell.h */,
+				7630D2A51625150C006BA163 /* ATLandingViewAppCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -377,6 +417,14 @@
 			files = (
 				767EA26215D1DD9C00970C30 /* InfoPlist.strings in Resources */,
 				767EA26B15D1DD9C00970C30 /* Main.storyboard in Resources */,
+				7630D29E16250751006BA163 /* background.png in Resources */,
+				7630D29F16250751006BA163 /* background@2x.png in Resources */,
+				7630D2A016250751006BA163 /* rank_background.png in Resources */,
+				7630D2A116250751006BA163 /* rank_background@2x.png in Resources */,
+				7630D2A216250751006BA163 /* top_bar.png in Resources */,
+				7630D2A316250751006BA163 /* top_bar@2x.png in Resources */,
+				7630D2A9162516C2006BA163 /* add_button.png in Resources */,
+				7630D2AA162516C2006BA163 /* add_button@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,9 +453,9 @@
 				7688B26715D1F54C00159D8C /* AFXMLRequestOperation.m in Sources */,
 				7688B26815D1F54C00159D8C /* UIImageView+AFNetworking.m in Sources */,
 				7688B27515D1FD2700159D8C /* ATLandingViewController.m in Sources */,
-				76826D1115DB2A7200851864 /* ATLandingAppCell.m in Sources */,
 				76826D1815DB2C5B00851864 /* ATDetailViewController.m in Sources */,
 				76826D2015DB2DED00851864 /* ATDataManager.m in Sources */,
+				7630D2A61625150C006BA163 /* ATLandingViewAppCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,10 +533,14 @@
 		767EA27815D1DD9C00970C30 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ethan Diamond (5L9JKT7UPF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ethan Diamond (5L9JKT7UPF)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppTrack/AppTrack-Prefix.pch";
 				INFOPLIST_FILE = "AppTrack/AppTrack-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "65827DF9-95B0-44F2-880D-C2F1762C2FA2";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "65827DF9-95B0-44F2-880D-C2F1762C2FA2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -496,10 +548,14 @@
 		767EA27915D1DD9C00970C30 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ethan Diamond (5L9JKT7UPF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ethan Diamond (5L9JKT7UPF)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppTrack/AppTrack-Prefix.pch";
 				INFOPLIST_FILE = "AppTrack/AppTrack-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "65827DF9-95B0-44F2-880D-C2F1762C2FA2";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "65827DF9-95B0-44F2-880D-C2F1762C2FA2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

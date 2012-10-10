@@ -8,65 +8,67 @@
 
 #import "ATLandingViewController.h"
 
-#import "ATLandingAppCell.h"
-#import "ATDetailViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
-@interface ATLandingViewController () <UITableViewDataSource, UITableViewDelegate>
+#import "ATFindAppViewController.h"
+#import "ATLandingViewAppCell.h"
 
-@property (nonatomic, weak) IBOutlet UITableView *tableView;
-@property (nonatomic, strong) NSArray *apps;
+@interface ATLandingViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
 
-- (void)loadApps;
+@property (nonatomic, strong) NSMutableArray *apps;
+
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, weak) IBOutlet UIView *rankView;
 
 @end
 
+#pragma mark -
+
 @implementation ATLandingViewController
+
+#pragma mark - View Lifecycle
+
+- (void)viewDidLoad
+{
+    self.rankView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.rankView.layer.borderWidth = 1.0f;
+    self.rankView.layer.cornerRadius = 15.0f;
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
     [self loadApps];
-    [self.tableView reloadData];
+    [self.collectionView reloadData];
 }
 
-#pragma mark - Table view data source
+#pragma mark - Collection View
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    // Return the number of rows in the section.
-    return _apps.count + 1;
+    return _apps.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row != _apps.count)
-    {
-        ATLandingAppCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"AppCell"];
-        cell.app = [_apps objectAtIndex:indexPath.row];
-        return cell;
-    }
-    else
-    {
-        UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"NewCell"];
-        return cell;
-    }
+    ATLandingViewAppCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AppCell" forIndexPath:indexPath];
+    cell.app = [_apps objectAtIndex:indexPath.row];
+    return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (indexPath.row != _apps.count)
-    {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        ATDetailViewController *controller = [storyboard instantiateViewControllerWithIdentifier:@"Details"];
-        controller.app = [_apps objectAtIndex:indexPath.row];
-        [self.navigationController pushViewController:controller animated:YES];
-    }
-}
+#pragma mark - Convenience
 
 - (void)loadApps
 {
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"App"];
-    _apps = [[ATDataManager sharedManager].mainContext executeFetchRequest:request error:nil];
+    self.apps = [[[ATDataManager sharedManager].mainContext executeFetchRequest:request error:nil] mutableCopy];
+    
+    //To have two wrap around...
+    if (self.apps.count == 2)
+    {
+        [self.apps addObject:[self.apps objectAtIndex:0]];
+        [self.apps addObject:[self.apps objectAtIndex:1]];
+    }
 }
 
 @end

@@ -1,8 +1,8 @@
 //
-//  ATLandingAppCell.h
+//  ATLandingViewAppCell.h
 //  AppTrack
 //
-//  Created by Ethan Diamond on 8/14/12.
+//  Created by Ethan Diamond on 10/9/12.
 //  Copyright (c) 2012 Ethan Diamond. All rights reserved.
 //
 
@@ -10,7 +10,7 @@
 
 #import "ATApp.h"
 
-@interface ATLandingAppCell : UITableViewCell
+@interface ATLandingViewAppCell : UICollectionViewCell
 
 @property (nonatomic, strong) ATApp *app;
 
