@@ -10,15 +10,22 @@
 
 #import <QuartzCore/QuartzCore.h>
 
+#import "ATApp.h"
 #import "ATFindAppViewController.h"
-#import "ATLandingViewAppCell.h"
+#import "ATLandingViewAppScrollView.h"
 
-@interface ATLandingViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface ATLandingViewController () <ATLandingViewAppScrollViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *apps;
+@property (nonatomic, strong) NSOperation *fetchOperation;
 
-@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
+@property (nonatomic, weak) IBOutlet ATLandingViewAppScrollView *scrollView;
 @property (nonatomic, weak) IBOutlet UIView *rankView;
+@property (nonatomic, weak) IBOutlet UILabel *rankLabel;
+@property (nonatomic, weak) IBOutlet UILabel *categoryLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UIActivityIndicatorView *activityIndicator;
+@property (nonatomic) int appIndex;
 
 @end
 
@@ -39,21 +46,41 @@
 {
     [super viewDidAppear:animated];
     [self loadApps];
-    [self.collectionView reloadData];
+    
+    if (self.apps.count)
+    {
+        self.scrollView.apps = self.apps;
+        [self appScrollViewFinishedScrollingOnApp:[self.apps objectAtIndex:0]];
+    }
 }
 
-#pragma mark - Collection View
+#pragma mark - Scroll View
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+- (void)appScrollViewBeganScrolling
 {
-    return _apps.count;
+    if (_activityIndicator.hidden)
+    {
+         [self showApp:nil];
+    }
+   
+    [_fetchOperation cancel];
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)appScrollViewFinishedScrollingOnApp:(ATApp *)app
 {
-    ATLandingViewAppCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"AppCell" forIndexPath:indexPath];
-    cell.app = [_apps objectAtIndex:indexPath.row];
-    return cell;
+    NSLog(@"Finding app: %@", app.name);
+    
+    _fetchOperation = [ATApp detailedAppWithApp:app handler:^(ATApp *app, NSError *error)
+    {
+        NSLog(@"DONE");
+        
+        if (error)
+        {
+            NSLog(@"%@", error);
+        }
+        
+        [self showApp:app];
+    }];
 }
 
 #pragma mark - Convenience
@@ -69,6 +96,26 @@
         [self.apps addObject:[self.apps objectAtIndex:0]];
         [self.apps addObject:[self.apps objectAtIndex:1]];
     }
+}
+
+- (void)showApp:(ATApp *)app
+{
+    if (!app)
+    {
+        _activityIndicator.hidden = NO;
+        _rankLabel.hidden = YES;
+        _categoryLabel.hidden = YES;
+        _nameLabel.hidden = YES;
+        return;
+    }
+    
+    _activityIndicator.hidden = YES;
+    _rankLabel.hidden = NO;
+    _rankLabel.text = app.rank;
+    _categoryLabel.hidden = NO;
+    _categoryLabel.text = app.category;
+    _nameLabel.hidden = NO;
+    _nameLabel.text = app.name;
 }
 
 @end

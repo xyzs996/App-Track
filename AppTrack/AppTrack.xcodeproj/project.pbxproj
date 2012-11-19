@@ -13,9 +13,9 @@
 		7630D2A116250751006BA163 /* rank_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7630D29B16250751006BA163 /* rank_background@2x.png */; };
 		7630D2A216250751006BA163 /* top_bar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7630D29C16250751006BA163 /* top_bar.png */; };
 		7630D2A316250751006BA163 /* top_bar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7630D29D16250751006BA163 /* top_bar@2x.png */; };
-		7630D2A61625150C006BA163 /* ATLandingViewAppCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7630D2A51625150C006BA163 /* ATLandingViewAppCell.m */; };
 		7630D2A9162516C2006BA163 /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 7630D2A7162516C2006BA163 /* add_button.png */; };
 		7630D2AA162516C2006BA163 /* add_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7630D2A8162516C2006BA163 /* add_button@2x.png */; };
+		7630D2BB16264D31006BA163 /* ATLandingViewAppScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7630D2BA16264D31006BA163 /* ATLandingViewAppScrollView.m */; };
 		767EA25615D1DD9C00970C30 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767EA25515D1DD9C00970C30 /* UIKit.framework */; };
 		767EA25815D1DD9C00970C30 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767EA25715D1DD9C00970C30 /* Foundation.framework */; };
 		767EA25A15D1DD9C00970C30 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767EA25915D1DD9C00970C30 /* CoreGraphics.framework */; };
@@ -51,10 +51,10 @@
 		7630D29B16250751006BA163 /* rank_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rank_background@2x.png"; sourceTree = "<group>"; };
 		7630D29C16250751006BA163 /* top_bar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = top_bar.png; sourceTree = "<group>"; };
 		7630D29D16250751006BA163 /* top_bar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_bar@2x.png"; sourceTree = "<group>"; };
-		7630D2A41625150C006BA163 /* ATLandingViewAppCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLandingViewAppCell.h; sourceTree = "<group>"; };
-		7630D2A51625150C006BA163 /* ATLandingViewAppCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLandingViewAppCell.m; sourceTree = "<group>"; };
 		7630D2A7162516C2006BA163 /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_button.png; sourceTree = "<group>"; };
 		7630D2A8162516C2006BA163 /* add_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add_button@2x.png"; sourceTree = "<group>"; };
+		7630D2B916264D31006BA163 /* ATLandingViewAppScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ATLandingViewAppScrollView.h; sourceTree = "<group>"; };
+		7630D2BA16264D31006BA163 /* ATLandingViewAppScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ATLandingViewAppScrollView.m; sourceTree = "<group>"; };
 		767EA25115D1DD9C00970C30 /* AppTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		767EA25515D1DD9C00970C30 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		767EA25715D1DD9C00970C30 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -348,8 +348,8 @@
 		7688B27115D1FCFE00159D8C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7630D2A41625150C006BA163 /* ATLandingViewAppCell.h */,
-				7630D2A51625150C006BA163 /* ATLandingViewAppCell.m */,
+				7630D2B916264D31006BA163 /* ATLandingViewAppScrollView.h */,
+				7630D2BA16264D31006BA163 /* ATLandingViewAppScrollView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -455,7 +455,7 @@
 				7688B27515D1FD2700159D8C /* ATLandingViewController.m in Sources */,
 				76826D1815DB2C5B00851864 /* ATDetailViewController.m in Sources */,
 				76826D2015DB2DED00851864 /* ATDataManager.m in Sources */,
-				7630D2A61625150C006BA163 /* ATLandingViewAppCell.m in Sources */,
+				7630D2BB16264D31006BA163 /* ATLandingViewAppScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
