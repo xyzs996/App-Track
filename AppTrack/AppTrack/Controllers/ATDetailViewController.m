@@ -8,7 +8,7 @@
 
 #import "ATDetailViewController.h"
 
-#import "AFNetworking/AFNetworking.h"
+#import "AFNetworking.h"
 
 @interface ATDetailViewController ()
 

@@ -8,7 +8,7 @@
 
 #import "ATFindAppCell.h"
 
-#import "AFNetworking/AFNetworking.h"
+#import "AFNetworking.h"
 
 @interface ATFindAppCell ()
 

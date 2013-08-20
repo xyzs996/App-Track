@@ -9,7 +9,7 @@
 #import "ATApp.h"
 #import "ATComment.h"
 
-#import "AFNetworking/AFNetworking.h"
+#import "AFNetworking.h"
 
 @implementation ATApp
 
